@@ -55,28 +55,9 @@ const rightInteraction = (direction) => {
     }
 
     if(scrollValue ===-1){
-        scrollValue=5
+        scrollValue = 5
     }
 
-    console.log(scrollValue);
-    //-3 + 6 -> 3
-    //-2 + 6 -> 4
-    //-1 + 6 -> 5
-
-    // 0
-    // 1
-    // 2
-    // 3
-    // 4
-    // 5
-
-    // 6 > 0
-    // 7 > 1
-    // ...
-
-    // 12 > 0
-    // 13 > 1
-    // 14 > 2
 
     const moveValue = `-${100 * scrollValue }%`;
     profileWrapper.style.transform = `translateX(${moveValue})`

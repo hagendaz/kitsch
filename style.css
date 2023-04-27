@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,9 +6,9 @@
 
 :root {
     --doc-height: 100%;
-   }
+}
 
-body{
+body {
     /* border: 10px solid red; */
     overflow: hidden;
     background-color: #000000;
@@ -23,28 +23,29 @@ body{
     align-items: center;
     position: relative;
 }
+
 /*카드*/
-.container{
-    width:360px;
+.container {
+    width: 360px;
     height: 540px;
     /* TEMP */
     user-select: none;
     pointer-events: none;
 }
 
-.logo{
+.logo {
     top: 60px;
     position: absolute;
 }
 
-.logo img{
+.logo img {
     /* border: 1px solid white; */
     width: 54px;
 }
 
-.card{
+.card {
     height: 100%;
-    width:100%;
+    width: 100%;
     position: relative;
     /* transition: transform 1500ms; */
     transform-style: preserve-3d;
@@ -56,27 +57,27 @@ body{
 
 
 .front,
-.back{
+.back {
     height: 100%;
-    width:100%;
+    width: 100%;
     border-radius: 1rem;
     box-shadow: 0 0 5px rgba(50, 50, 50, 0.25);
     position: absolute;
     backface-visibility: hidden;
 }
 
-.front{
+.front {
     overflow: hidden;
 }
 
-.back{
+.back {
     background-image: url(./images/back.jpg);
     background-size: cover;
     transform: rotateY(180deg);
     border: 5px solid white;
 }
 
-.profile-wrapper{
+.profile-wrapper {
 
     width: 100%;
     height: 100%;
@@ -85,15 +86,15 @@ body{
 }
 
 
-.profile-wrapper img{
+.profile-wrapper img {
     /* border: 2px solid blue; */
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
+}
 
 /*하트*/
-.heart-wrapper{
+.heart-wrapper {
     /* border: 2px solid yellowgreen; */
     position: absolute;
     left: 0;
@@ -107,7 +108,7 @@ body{
 
 
 
-span{
+span {
     position: absolute;
     width: 200px;
     height: 200px;
@@ -134,16 +135,18 @@ span{
     }
 } */
 
-@keyframes heart{
-    0%{
+@keyframes heart {
+    0% {
         transform: translate(-50%, -50%) scale(1);
         opacity: 1;
     }
-    95%{
+
+    95% {
         transform: translate(-50%, -50%) scale(1);
         opacity: 1;
     }
-    100%{
+
+    100% {
         transform: translate(-50%, -50%) scale(1.5);
         opacity: 0;
     }
@@ -151,32 +154,40 @@ span{
 
 
 
-@-webkit-keyframes spin{
-    100%{-webkit-transform: rotateY(360deg);}
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotateY(360deg);
+    }
 }
-@-moz-keyframes spin{
-    100%{-webkit-transform: rotateY(360deg);}
+
+@-moz-keyframes spin {
+    100% {
+        -webkit-transform: rotateY(360deg);
+    }
 }
-@keyframes spin{
-    100%{-webkit-transform: rotateY(360deg);}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotateY(360deg);
+    }
 }
 
 
-@media ( max-width: 768px ) {
-    .container{
-        width:252px;
+@media (max-width: 768px) {
+    .container {
+        width: 252px;
         height: 378px;
     }
 
 
-.logo{
-    top: 80px;
+    .logo {
+        top: 80px;
+    }
 }
-  }
 
 
-  ion-icon {
+ion-icon {
     color: white;
     font-size: 42px;
     padding: 0 10px;
-  }
+}
