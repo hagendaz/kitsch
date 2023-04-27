@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --doc-height: 100%;
+   }
+
+body{
+    /* border: 10px solid red; */
+    overflow: hidden;
+    background-color: #000000;
+    /* background-image: url(./images/bg.jpg); */
+    height: 100vh;
+    height: var(--doc-height);
+    width: 100vw;
+    overflow: hidden;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+/*카드*/
+.container{
+    width:360px;
+    height: 540px;
+    /* TEMP */
+    user-select: none;
+    pointer-events: none;
+}
+
+.logo{
+    top: 60px;
+    position: absolute;
+}
+
+.logo img{
+    /* border: 1px solid white; */
+    width: 54px;
+}
+
+.card{
+    height: 100%;
+    width:100%;
+    position: relative;
+    /* transition: transform 1500ms; */
+    transform-style: preserve-3d;
+    -webkit-animation: spin 5s linear infinite;
+    -moz-animation: spin 5s linear infinite;
+    animation: spin 5s linear infinite;
+    /* animation-play-state: paused; */
+}
+
+
+.front,
+.back{
+    height: 100%;
+    width:100%;
+    border-radius: 1rem;
+    box-shadow: 0 0 5px rgba(50, 50, 50, 0.25);
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front{
+    overflow: hidden;
+}
+
+.back{
+    background-image: url(./images/back.jpg);
+    background-size: cover;
+    transform: rotateY(180deg);
+    border: 5px solid white;
+}
+
+.profile-wrapper{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+}
+
+
+.profile-wrapper img{
+    /* border: 2px solid blue; */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+/*하트*/
+.heart-wrapper{
+    /* border: 2px solid yellowgreen; */
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    user-select: none;
+    pointer-events: none;
+}
+
+
+
+span{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    background: url(./images/blackheart.png);
+    background-size: cover;
+    animation: heart 5s linear infinite;
+    mix-blend-mode: plus-lighter;
+}
+
+
+
+/* @keyframes heart{
+    0%{
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+    100%{
+        transform: translate(-50%, -500%);
+        opacity: 0;
+    }
+} */
+
+@keyframes heart{
+    0%{
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    95%{
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    100%{
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
+    }
+}
+
+
+
+@-webkit-keyframes spin{
+    100%{-webkit-transform: rotateY(360deg);}
+}
+@-moz-keyframes spin{
+    100%{-webkit-transform: rotateY(360deg);}
+}
+@keyframes spin{
+    100%{-webkit-transform: rotateY(360deg);}
+}
+
+
+@media ( max-width: 768px ) {
+    .container{
+        width:252px;
+        height: 378px;
+    }
+
+
+.logo{
+    top: 80px;
+}
+  }
+
+
+  ion-icon {
+    color: white;
+    font-size: 42px;
+    padding: 0 10px;
+  }
